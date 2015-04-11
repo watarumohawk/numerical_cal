@@ -1,4 +1,4 @@
-# numerical_cal
+# numerical_calculus
 
 数値計算
 
