@@ -1,42 +1,57 @@
 #include <stdio.h>
 #include <math.h>
+#include <stdlib.h>
 #define g 9.8
 
 int main(void) {
 
-	// double f1(double v0, deg, t), f2(double x);
-	double f1(double v0, deg, t);
-	double x, y, position, v0, deg, t;
+	double DetermineX(double v0, double deg, double t);
+	double DetermineY(double v0, double deg, double t);
+	double DetermineMag(double v0, double deg);
 
-	printf("初速度v0 (m/s)、角度θ（°）、時間tを入力して下さい。 v0 = , deg = , t = ");
-	scanf("%lf %lf %lf", &v0, &deg, &t);
+	double x, y, v0, deg, t, magnitude;
 
-	position = f1(v0, deg, t);
-	// magnitude = f2(v0, deg, t);
+	printf("初速度v0 (m/s)、角度θ（°）、時間tを入力して下さい。\n");
+	printf("v0 = ");
+	scanf("%lf", &v0);
 
-	// printf("x=%f y=%f z=%f \n", x, y, v0);
-	printf("position=%f y=%f z=%f \n", position, y, v0);
+	printf("deg = ");
+	scanf("%lf", &deg);
+
+	printf("t = ");
+	scanf("%lf", &t);
+
+	x = DetermineX(v0, deg, t);
+	y = DetermineY(v0, deg, t);
+	magnitude = DetermineMag(v0, deg);
+
+	printf("x=%f y=%f\n", x, y);
+	printf("magnitude=%f \n", magnitude);
 
 	return 0;
 }
 
-double f1(double v0, deg, t) {
-	double x, y;
+double DetermineX(double v0, double deg, double t) {
+	double x;
 
-	x = v0*sin(deg)*t;
+	x = v0*cos(deg)*t;
+
+	return x;
+}
+
+double DetermineY(double v0, double deg, double t) {
+	double y;
+
 	y = v0*sin(deg)*t - (1/2)*g*t*t;
 
-	return(x, y);
+	return y;
 }
 
-double f2(double v0, deg, t) {
-	double magnitude, Vx, Vy;
+double DetermineMag(double v0, double deg) {
+	double magnitude, v;
 
-	magnitude =
+	v = sqrt( v0*v0*( sin(deg)*sin(deg) + cos(deg)*cos(deg) ) );
+	magnitude = abs(v);
 
-	return(magnitude);
+	return magnitude;
 }
-
-
-
-
