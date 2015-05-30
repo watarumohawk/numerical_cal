@@ -49,7 +49,7 @@ double DetermineX(double v0, double rad, int i) {
 double DetermineY(double v0, double rad, int i) {
 	double y;
 
-	y = v0*sin(rad)*i - 0.5*g*i*i;
+	y = v0*sin(rad)*i - (1./2.)*g*i*i;
 
 	return y;
 }
