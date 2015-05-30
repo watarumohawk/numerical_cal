@@ -11,7 +11,7 @@ int main(void) {
 
 	for (i=1; i<=n; i++) {
 		sum1 += i;
-		sum2 +=  i * sqrt(i);
+		sum2 += pow(i, 3./2.);
 		factorial *= i;
 	}
 
