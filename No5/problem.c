@@ -16,7 +16,7 @@ int main() {
 
 	printf("deg = ");
 	scanf("%lf", &deg);
-	rad = deg*(M_PI/180);
+	rad = deg*(M_PI/180.);
 
 	printf("t = ");
 	scanf("%d", &t);
