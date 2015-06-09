@@ -3,7 +3,8 @@
 #define f(x) cos(x)*cos(x)
 
 int main(void) {
-	double a, b, x, x1, dx, i, s, s1, n, deg;
+	double a, b, x, x1, dx, s, s1, deg;
+	int i, n;
 
 	printf("角度（°）を入力して下さい。 deg = ");
 	scanf("%lf", &deg);
@@ -19,7 +20,7 @@ int main(void) {
 	for (i=0; i<n; i++) {
 		x = a + i*dx;
 		x1 = x + dx;
-		s1 = ( f(x) + f(x1) )/2*dx;
+		s1 = ( ( f(x) + f(x1) )/2 )*dx;
 		s += s1;
 	}
 
