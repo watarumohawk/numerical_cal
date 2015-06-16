@@ -7,7 +7,7 @@ int main(void) {
 	f1 = 2;
 	dx = 0.01;
 
-	for (int i=0; i<101; ++i) {
+	for (int i=0; i<=100; ++i) {
 		x = i*dx;
 
         f2 = f1 - 3*x*dx*pow(f1, 2);
