@@ -10,23 +10,24 @@ int main(void) {
 	scanf("%d", &n);
 
 	a = 0;
-	s = 0;
 
 	FILE *data;
 	data = fopen("problem_data.csv", "w");
 
 	for (int i=0; i<=360; i++) {
+        b = i*(M_PI/180.);
+        dx = (b-a)/(2*n);
+        s = 0;
 
-		b = i*(M_PI/180.);
-		dx = (b-a)/(2*n);
+        for(int j=0; j<=n; j++) {
+            x = a + 2*j*dx;
+            x1 = x + dx;
+            x2 = x + 2*dx;
+            s1 = ( ( f(x) + 4*f(x1) + f(x2) )/3 )*dx;
+            s += s1;
+        }
 
-		x = a + 2*i*dx;
-		x1 = x + dx;
-		x2 = x + 2*dx;
-		s1 = ( ( f(x) + 4*f(x1) + f(x2) )/3 )*dx;
-		s += s1;
-
-		fprintf(data, "%f, %f\n", b, s);
+        fprintf(data, "%f, %f\n", b, s);
 	}
 
 	fclose(data);
