@@ -9,7 +9,7 @@ int main(void) {
 	printf("角度（°）を入力して下さい。 deg = ");
 	scanf("%lf", &deg);
 	printf("分割数を入力して下さい。 n = ");
-	scanf("%lf", &n);
+	scanf("%d", &n);
 
 	s = 0;
 	a = 0;
@@ -24,7 +24,7 @@ int main(void) {
 		s += s1;
 	}
 
-	printf("n = %f s = %f\n", n, s);
+	printf("n = %d s = %f\n", n, s);
 
 	return 0;
 }
