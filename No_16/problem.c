@@ -21,7 +21,7 @@ int main(void) {
     FILE * data;
     data = fopen("problem_data.csv", "w");
 
-    for (int i=0; i<200; ++i) {
+    for (int i=0; i<=200; ++i) {
         t = i*dt;
 
         k1 = dt*v1;
