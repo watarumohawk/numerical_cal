@@ -43,3 +43,9 @@ C言語での数値計算
 * [No_15](https://github.com/watarumohawk/numerical_calculus/tree/master/No_15): 2階常微分方程式の解をグラフにする（ルンゲクッタ法）
 
 * [No_16](https://github.com/watarumohawk/numerical_calculus/tree/master/No_16): 斜方投射をルンゲクッタ法で計算
+
+* No_17: まだ
+
+* [No_18](https://github.com/watarumohawk/numerical_calculus/tree/master/No_18): 一様磁場中の荷電粒子の運動をルンゲクッタ法で計算
+
+* [No_19](https://github.com/watarumohawk/numerical_calculus/tree/master/No_19): 電場がある場合の一様磁場中の荷電粒子の運動をルンゲクッタ法で計算
